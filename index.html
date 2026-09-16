@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sajadhsn.com — Networking Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAFAF7;
+    --ink: #1B1E22;
+    --ink-soft: #52585F;
+    --accent: #2C5F8A;
+    --line: #DEDCD4;
+    --card: #F2F0E9;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---- Header / Nav ---- */
+  header {
+    padding: 48px 0 32px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .identity {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: 'Newsreader', serif;
+    font-size: 20px;
+  }
+
+  .identity-text h1 {
+    font-family: 'Newsreader', serif;
+    font-weight: 500;
+    font-size: 22px;
+    margin: 0 0 2px;
+    letter-spacing: -0.01em;
+  }
+
+  .identity-text p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 14.5px;
+  }
+
+  nav {
+    display: flex;
+    gap: 24px;
+  }
+
+  nav a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 14.5px;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+
+  nav a:hover, nav a:focus-visible {
+    color: var(--ink);
+    border-color: var(--accent);
+  }
+
+  /* ---- Intro ---- */
+  .intro {
+    padding: 40px 0 12px;
+  }
+
+  .intro h2 {
+    font-family: 'Newsreader', serif;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.3;
+    margin: 0 0 14px;
+    max-width: 34ch;
+  }
+
+  .intro p {
+    color: var(--ink-soft);
+    max-width: 56ch;
+    margin: 0 0 8px;
+  }
+
+  .intro a { color: var(--accent); }
+
+  /* ---- Section headings ---- */
+  section {
+    padding: 44px 0;
+    border-top: 1px solid var(--line);
+    scroll-margin-top: 24px;
+  }
+
+  section > h3 {
+    font-family: 'Newsreader', serif;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 0 0 24px;
+  }
+
+  /* ---- Projects ---- */
+  .project {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 20px;
+    margin-bottom: 14px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    transition: border-color 0.15s;
+  }
+
+  .project:last-child { margin-bottom: 0; }
+
+  .project:hover, .project:focus-visible {
+    border-color: var(--accent);
+  }
+
+  .project-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  .project h4 {
+    margin: 0;
+    font-size: 16.5px;
+    font-weight: 600;
+  }
+
+  .project-status {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  .project p {
+    margin: 0 0 12px;
+    color: var(--ink-soft);
+    font-size: 14.5px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    color: var(--ink-soft);
+    background: var(--bg);
+    border: 1px solid var(--line);
+    padding: 3px 8px;
+    border-radius: 2px;
+  }
+
+  /* ---- Contact / Footer ---- */
+  footer {
+    padding: 40px 0 60px;
+    border-top: 1px solid var(--line);
+  }
+
+  footer p {
+    color: var(--ink-soft);
+    margin: 0 0 16px;
+    max-width: 50ch;
+  }
+
+  .links-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .links-row a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 14.5px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2px;
+  }
+
+  .links-row a:hover, .links-row a:focus-visible {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  @media (max-width: 480px) {
+    .project-top { flex-direction: column; align-items: flex-start; gap: 4px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <div class="identity">
+      <div class="avatar">S</div>
+      <div class="identity-text">
+        <h1>Sajad</h1>
+        <p>sajadhsn.com — learning networking, one lab at a time</p>
+      </div>
+    </div>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="intro">
+    <h2>I map, break, and rebuild networks to understand how they actually work.</h2>
+  </div>
+
+  <section id="projects">
+    <h3>Projects</h3>
+
+    <a class="project" href="#">
+      <div class="project-top">
+        <h4>Mapping My Network Path (Campus Network)</h4>
+        <span class="project-status">complete</span>
+      </div>
+      <p>
+        Traced the path my laptop's traffic takes to reach the internet while connected to Algonquin
+        College's WiFi, using only passive, read-only tools — since this is a shared network I don't
+        administer, I deliberately avoided active scanning tools like nmap that probe other devices.
+      </p>
+      <p>
+        Ran <code>ipconfig /all</code> to find my laptop's own IP and default gateway, <code>arp -a</code>
+        to check locally cached device info, and <code>tracert 8.8.8.8</code> to map every hop from my
+        machine out to Google's public DNS server. The trace showed my laptop reaching the campus gateway,
+        then Algonquin's own border router, then eight hops that didn't reply to the trace (routers
+        configured to silently drop ICMP probes rather than respond — normal behavior, not a broken path),
+        before successfully reaching the destination. Built a hop-by-hop diagram of the full path from
+        the trace output.
+      </p>
+      <div class="tags">
+        <span class="tag">ipconfig</span>
+        <span class="tag">arp -a</span>
+        <span class="tag">tracert</span>
+        <span class="tag">ICMP</span>
+      </div>
+    </a>
+
+  </section>
+
+  <footer id="contact">
+    <p>Open to networking / IT support roles. Reach out or take a look at the rest of my work.</p>
+    <div class="links-row">
+      <a href="https://github.com/yourusername">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>

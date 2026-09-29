@@ -20,6 +20,7 @@ normal behavior and doesn't mean the path is broken. Traffic successfully
 reaches the destination, `dns.google` (`8.8.8.8`), at hop 11.
 
 
+<img width="1882" height="792" alt="image" src="https://github.com/user-attachments/assets/bc6f4842-5368-4c7f-a307-f8c3afb726f8" />
 
 ## What I Learned
 - The difference between passive tools (arp, ipconfig) and active ones
